@@ -1,0 +1,2270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Award Terpilih Mahkamah Perusahaan Malaysia — Case Report</title>
+<style>
+  :root {
+    --bg: #fafaf9;
+    --card: #ffffff;
+    --text: #1c1917;
+    --text-secondary: #57534e;
+    --border: #e7e5e4;
+    --accent: #1e40af;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Layout ─────────────────────────────── */
+  .layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+  }
+
+  /* ── Sidebar ────────────────────────────── */
+  .sidebar {
+    background: #1c1917;
+    color: #e7e5e4;
+    padding: 2rem 1.25rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .sidebar h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #a8a29e;
+    margin-bottom: 0.25rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .sidebar .doc-title {
+    font-size: 0.85rem;
+    color: #78716c;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+
+  .sidebar-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .sidebar-section h2 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #78716c;
+    margin-bottom: 0.75rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .cat-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    color: #d6d3d1;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 2px;
+    transition: background 0.15s;
+    cursor: pointer;
+  }
+
+  .cat-link:hover, .cat-link.active {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+  }
+
+  .cat-count {
+    background: rgba(255,255,255,0.1);
+    padding: 0.1rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    min-width: 1.5rem;
+    text-align: center;
+  }
+
+  .sidebar-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .stat-box {
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    padding: 0.75rem;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    display: block;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+    color: #78716c;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .search-box {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.85rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    outline: none;
+    margin-bottom: 1rem;
+  }
+  .search-box::placeholder { color: #78716c; }
+  .search-box:focus { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.12); }
+
+  .show-all-btn {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    color: #a8a29e;
+    font-size: 0.75rem;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  .show-all-btn:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+  /* ── Main Content ───────────────────────── */
+  .main {
+    padding: 2.5rem 3rem;
+    max-width: 900px;
+  }
+
+  .page-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .page-header h1 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+  }
+
+  .page-header .subtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  /* ── Overview Chart ─────────────────────── */
+  .overview-chart {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .overview-chart h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .chart-row {
+    display: grid;
+    grid-template-columns: 160px 1fr 30px;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .chart-label {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    text-align: right;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .chart-bar-wrap {
+    height: 18px;
+    background: #f5f5f4;
+    border-radius: 9px;
+    overflow: hidden;
+  }
+
+  .chart-bar {
+    height: 100%;
+    border-radius: 9px;
+    transition: width 0.6s ease;
+    min-width: 18px;
+  }
+
+  .chart-value {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* ── Case Card ──────────────────────────── */
+  .case-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+
+  .case-card:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  }
+
+  .case-header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .case-number {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .case-name {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .case-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .meta-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #a8a29e;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .meta-value {
+    font-size: 0.85rem;
+    color: var(--text);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .cat-badge {
+    display: inline-block;
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 500;
+  }
+
+  .case-body {
+    padding: 1.5rem 2rem;
+  }
+
+  .section {
+    margin-bottom: 1.25rem;
+  }
+
+  .section h3 {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    margin-bottom: 0.4rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    border-bottom: 1px solid #f5f5f4;
+    padding-bottom: 0.3rem;
+  }
+
+  .summary-text {
+    font-size: 0.92rem;
+    color: #44403c;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .compensation {
+    font-size: 0.88rem;
+    color: var(--text);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .na {
+    color: #a8a29e;
+    font-style: italic;
+    font-size: 0.85rem;
+  }
+
+  /* ── Badges ─────────────────────────────── */
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0.15rem 0.15rem 0.15rem 0;
+  }
+  .badge-red { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+  .badge-green { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+  .badge-blue { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+  .badge-amber { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
+  .badge-neutral { background: #f5f5f4; color: #57534e; border: 1px solid #e7e5e4; }
+
+  .tag-list {
+    list-style: none;
+    padding: 0;
+  }
+  .tag-list li {
+    font-size: 0.82rem;
+    color: #44403c;
+    padding: 0.2rem 0;
+    padding-left: 0.9rem;
+    position: relative;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .tag-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 5px;
+    height: 5px;
+    background: #d6d3d1;
+    border-radius: 50%;
+  }
+
+  /* ── Utility ────────────────────────────── */
+  .hidden { display: none !important; }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 42px;
+    height: 42px;
+    background: #1c1917;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 100;
+  }
+  .back-to-top.visible { opacity: 1; }
+
+  .result-count {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  /* ── Print ──────────────────────────────── */
+  @media print {
+    .sidebar { display: none; }
+    .layout { grid-template-columns: 1fr; }
+    .main { padding: 1rem; max-width: 100%; }
+    .case-card { break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
+    .back-to-top { display: none; }
+    .search-box { display: none; }
+  }
+
+  /* ── Responsive ─────────────────────────── */
+  @media (max-width: 768px) {
+    .layout { grid-template-columns: 1fr; }
+    .sidebar { position: relative; height: auto; }
+    .main { padding: 1.5rem 1rem; }
+    .two-col { grid-template-columns: 1fr; }
+    .case-meta { grid-template-columns: 1fr 1fr; }
+    .chart-row { grid-template-columns: 100px 1fr 25px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h1>Case Report</h1>
+    <p class="doc-title">Award Terpilih Mahkamah Perusahaan Malaysia<br>Januari 2023 – Januari 2025</p>
+
+    <div class="sidebar-stats">
+      <div class="stat-box">
+        <span class="stat-num">28</span>
+        <span class="stat-label">Total Cases</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">21</span>
+        <span class="stat-label">With Outcome</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">24</span>
+        <span class="stat-label">Compensation</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">13</span>
+        <span class="stat-label">Categories</span>
+      </div>
+    </div>
+
+    <input type="text" class="search-box" id="searchBox" placeholder="Search cases, judges, parties...">
+
+    <div class="sidebar-section">
+      <h2>Filter by Category</h2>
+      <button class="show-all-btn" id="showAll">Show All Cases</button>
+      <a href="#" class="cat-link" data-cat="Salah Laku / Misconduct" style="border-left: 3px solid #ef4444">Salah Laku <span class="cat-count">7</span></a>
+<a href="#" class="cat-link" data-cat="Pemberhentian Kerja / Retrenchment" style="border-left: 3px solid #f97316">Pemberhentian Kerja <span class="cat-count">4</span></a>
+<a href="#" class="cat-link" data-cat="Trade Dispute" style="border-left: 3px solid #8b5cf6">Trade Dispute <span class="cat-count">3</span></a>
+<a href="#" class="cat-link" data-cat="Pembuangan Konstruktif / Constructive Dismissal" style="border-left: 3px solid #eab308">Pembuangan Konstruktif <span class="cat-count">3</span></a>
+<a href="#" class="cat-link" data-cat="Seksyen 2 Akta Perhubungan Perusahaan 1967 / Section 2 IRA 1967" style="border-left: 3px solid #06b6d4">Seksyen 2 Akta Perhubungan Perusahaan 1967 <span class="cat-count">2</span></a>
+<a href="#" class="cat-link" data-cat="Non-Compliance" style="border-left: 3px solid #64748b">Non-Compliance <span class="cat-count">2</span></a>
+<a href="#" class="cat-link" data-cat="Collective Agreement" style="border-left: 3px solid #6366f1">Collective Agreement <span class="cat-count">1</span></a>
+<a href="#" class="cat-link" data-cat="Peletakan Jawatan Paksa / Forced Resignation" style="border-left: 3px solid #ec4899">Peletakan Jawatan Paksa <span class="cat-count">1</span></a>
+<a href="#" class="cat-link" data-cat="Pekerjaan Tetap / Fixed Term Contract" style="border-left: 3px solid #14b8a6">Pekerjaan Tetap <span class="cat-count">1</span></a>
+<a href="#" class="cat-link" data-cat="Penamatan Pekerjaan Atas Dasar Perubatan / Medical Termination" style="border-left: 3px solid #a855f7">Penamatan Pekerjaan Atas Dasar Perubatan <span class="cat-count">1</span></a>
+<a href="#" class="cat-link" data-cat="Kekebalan Negara Asing / Immunity of Foreign State" style="border-left: 3px solid #0ea5e9">Kekebalan Negara Asing <span class="cat-count">1</span></a>
+<a href="#" class="cat-link" data-cat="Penemuan Dokumen / Discovery of Documents" style="border-left: 3px solid #84cc16">Penemuan Dokumen <span class="cat-count">1</span></a>
+<a href="#" class="cat-link" data-cat="Award Interim / Interim Award — Strike Off" style="border-left: 3px solid #78716c">Award Interim <span class="cat-count">1</span></a>
+
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-header">
+      <h1>Selected Awards of the Industrial Court of Malaysia</h1>
+      <p class="subtitle">Award Terpilih Mahkamah Perusahaan Malaysia — January 2023 to January 2025 — 28 Cases</p>
+    </div>
+
+    <div class="overview-chart">
+      <h2>Cases by Category</h2>
+      
+    <div class="chart-row">
+      <span class="chart-label">Salah Laku</span>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar" style="width: 100.0%; background: #ef4444"></div>
+      </div>
+      <span class="chart-value">7</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-label">Pemberhentian Kerja</span>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar" style="width: 57.14285714285714%; background: #f97316"></div>
+      </div>
+      <span class="chart-value">4</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-label">Trade Dispute</span>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar" style="width: 42.857142857142854%; background: #8b5cf6"></div>
+      </div>
+      <span class="chart-value">3</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-label">Pembuangan Konstruktif</span>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar" style="width: 42.857142857142854%; background: #eab308"></div>
+      </div>
+      <span class="chart-value">3</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-label">Seksyen 2 Akta Perhubungan Perusahaan 1967</span>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar" style="width: 28.57142857142857%; background: #06b6d4"></div>
+      </div>
+      <span class="chart-value">2</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-label">Non-Compliance</span>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar" style="width: 28.57142857142857%; background: #64748b"></div>
+      </div>
+      <span class="chart-value">2</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-label">Collective Agreement</span>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar" style="width: 14.285714285714285%; background: #6366f1"></div>
+      </div>
+      <span class="chart-value">1</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-label">Peletakan Jawatan Paksa</span>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar" style="width: 14.285714285714285%; background: #ec4899"></div>
+      </div>
+      <span class="chart-value">1</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-label">Pekerjaan Tetap</span>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar" style="width: 14.285714285714285%; background: #14b8a6"></div>
+      </div>
+      <span class="chart-value">1</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-label">Penamatan Pekerjaan Atas Dasar Perubatan</span>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar" style="width: 14.285714285714285%; background: #a855f7"></div>
+      </div>
+      <span class="chart-value">1</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-label">Kekebalan Negara Asing</span>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar" style="width: 14.285714285714285%; background: #0ea5e9"></div>
+      </div>
+      <span class="chart-value">1</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-label">Penemuan Dokumen</span>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar" style="width: 14.285714285714285%; background: #84cc16"></div>
+      </div>
+      <span class="chart-value">1</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-label">Award Interim</span>
+      <div class="chart-bar-wrap">
+        <div class="chart-bar" style="width: 14.285714285714285%; background: #78716c"></div>
+      </div>
+      <span class="chart-value">1</span>
+    </div>
+    </div>
+
+    <div class="result-count" id="resultCount">Showing all 28 cases</div>
+
+    <div id="caseList">
+      
+    <div class="case-card" data-category="Collective Agreement" id="case-1">
+      <div class="case-header" style="border-left: 4px solid #6366f1">
+        <div class="case-number">Case 1</div>
+        <h2 class="case-name">Kesatuan Eksekutif RHB Bank Berhad v RHB Bank Berhad</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">4/2-2565/18</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 233 of 2023</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Tuan Augustine Anthony</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">12-51</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #6366f1">Collective Agreement</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Kesatuan Eksekutif RHB Bank Berhad (the Union) brought a trade dispute against RHB Bank Berhad (the Bank) concerning the terms and conditions to be incorporated into the parties&#x27; 1st Collective Agreement for the period 1 January 2014 to 31 December 2016. The dispute was referred to the Industrial Court by the Minister of Human Resources on 3 August 2018 pursuant to Section 26(2) of the Industrial Relations Act 1967. The Union proposed 42 articles while the Bank counter-proposed 41; the parties agreed on 24 articles, leaving 17 articles in dispute covering matters such as parties, effective date, check-off, transfer, misconduct, rates of pay, annual increment, allowances, hours of work, annual leave, medical benefits, special leave, retrenchment, new system and technology, exclusion, implementation, and payment of arrears. The Court determined each disputed article, adopting a mix of the Union&#x27;s and Bank&#x27;s proposals based on equity, financial implications, and industry practice under Section 30(4) of the Act. Notable findings included: the effective date was fixed at 1 January 2020; the Union&#x27;s proposal on retrenchment consultation was rejected as falling within managerial prerogative under Section 13(3)(d); and the Union&#x27;s proposal on video display unit health benefits was accepted as fair and consistent with industry standards. The Court ordered that all agreed articles and the Court&#x27;s determinations on disputed articles be incorporated into and form the 1st Collective Agreement, constituting the Award.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM3,000.00; RM5,000.00; RM 1,500.00; RM 2,500.00; RM 3,000; RM 5,000.00; RM 4,500.00; RM 7,500.00; RM80.00; RM100.00; RM3,600; RM4,200; RM4,900; RM5,700; RM10,850; RM14,250; RM2,600; RM3,200; RM3,900; RM4,600; RM4,800; RM6,000; RM7,200; RM8,500; RM215; RM310; RM20.00; RM30.00; RM50.00; RM18.00; RM60.00; RM120.00; RM220.00; RM70.00; RM35.00; RM150.00; RM110.00; RM130.00; RM0.90; RM1.00; RM200.00; RM250.00; RM230.00; RM0; RM120; RM55.00; RM40.00; RM100; RM2,500; RM4,000; RM7,000; RM400; RM800; RM200; RM2,000; RM1,000; RM300; RM2,500.00; RM500.00</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Natural justice</li><li>Domestic inquiry</li><li>Just cause or excuse</li><li>Misconduct</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>S.K. Das J in Hariprasa v. Divelkar AIR [1957]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Trade Dispute" id="case-2">
+      <div class="case-header" style="border-left: 4px solid #8b5cf6">
+        <div class="case-number">Case 2</div>
+        <h2 class="case-name">Persatuan Bank-Bank Perdagangan Tanah Melayu v National Union of Bank Employees, States of Malaya</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">42/478/24</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 1679 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Tuan Paramalingam J. Doraisamy</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">52-58</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #8b5cf6">Trade Dispute</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">The National Union of Bank Employees (the Union) applied for the issuance of a subpoena (Form O) against the Minister of Human Resources, Y.B. Steven Sim Chee Keong, to compel his testimony in a trade dispute between Persatuan Bank-Bank Perdagangan Tanah Melayu (MCBA) and the Union concerning the validity of a Memorandum of Agreement on Festival Aid dated 5 April 2023. MCBA objected, arguing the Minister was not a party to the MOA, was not even the Minister when it was executed, and that calling him would be an abuse of process. The Union contended the Minister had secretly met with MCBA regarding Festival Aid payments for 2024 without the Union&#x27;s knowledge, and his evidence was relevant. The Court found that the trade dispute was squarely about the validity of the MOA dated 5 April 2023, to which the Minister had no involvement whatsoever. The Union failed to produce any evidence of the Minister&#x27;s alleged participation in a meeting with MCBA. Applying the principles from Wong Sin Chong v Bhagwan Singh and Ismail v Hasnul on the proper exercise of subpoena powers and abuse of process, the Court concluded the Union&#x27;s application was a fishing expedition and an abuse of the Court&#x27;s process. The Court allowed MCBA&#x27;s objection and refused the issuance of the subpoena against the Minister.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-neutral">Pending / Not stated</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation"><span class="na">No monetary award</span></p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <span class="na">None cited</span>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>In Ismail v. Hasnul [1968]</li><li>The King v. Baines [1909]</li><li>The right of a party to the attendance of witnesses is a crucial part of our judicial system, but the right must be protected against any oppression or abuse. Thus in Raymond v. Tapson [1883]</li><li>Re. Mundell, Fenton v. Cumberlege [1883]</li><li>Industrial Relations Act 1967</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Trade Dispute" id="case-3">
+      <div class="case-header" style="border-left: 4px solid #8b5cf6">
+        <div class="case-number">Case 3</div>
+        <h2 class="case-name">Persatuan Bank-Bank Perdagangan Tanah Melayu v National Union of Bank Employees, States of Malaya</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">22/3-478/24</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 174 of 2025</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Tuan Paramalingam J. Doraisamy</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">59-76</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #8b5cf6">Trade Dispute</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Persatuan Bank-Bank Perdagangan Tanah Melayu (MCBA) and the National Union of Bank Employees (the Union) were in dispute over the validity and effect of a Memorandum of Agreement on Festival Aid dated 5 April 2023, under which member banks of MCBA paid one month&#x27;s salary as Festival Aid to Union members for the year 2023. The Union contended the MOA obligated MCBA to continue paying Festival Aid for 2024 and beyond, while MCBA argued the payment was a one-off arrangement for 2023 only and that the MOA had no legal or binding effect as it was never deposited with the Industrial Court for cognizance. The Court found that the MOA constituted a collective agreement within the meaning of Section 2 of the Industrial Relations Act 1967, and that under Sections 16(1) and 17(2) of the Act, as well as Articles 3(1) and 3(3) of the 19th Collective Agreement, it was mandatory for the MOA to be deposited for cognizance in order to have legal effect. The Court relied on established precedent including Non-Metallic Mineral Products Manufacturing Employees&#x27; Union v South East Fire Bricks, the NUBE v HSBC Bank Malaysia Berhad line of cases affirmed up to the Federal Court, and found the MOA was clearly intended as a one-off payment for 2023 only. The Court unanimously held that the MOA had no legal or binding effect and dismissed the Union&#x27;s claim for Festival Aid payments post-2023.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-blue">Reinstatement</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM500.00</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <span class="na">None cited</span>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>Pekerja Perkilangan Perusahaan Makanan v. Koperasi Nelayan Negeri Terengganu Bhd [2009]</li><li>BANK PERDAGANGAN TANAH MELAYU v. NATIONAL UNION OF BANK EMPLOYEES, STATES OF MALAYA The legislative framework as set out in Part IV of the Act is clear in that the only way the union could have given legal effect to the MOA was by having it deposited in court and receiving cognizance. The union elected not to do this and now they cannot rely on equity and good conscience to give it legal effect. For authority, I cite the case of Sarawak Bank Employees&#x27; Union v. Sarawak Commercial Banks Association [2012]</li><li>Ors v. South East Fire Bricks Sdn Bhd [1976]</li><li>Industrial Relations Act 1967</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Trade Dispute" id="case-4">
+      <div class="case-header" style="border-left: 4px solid #8b5cf6">
+        <div class="case-number">Case 4</div>
+        <h2 class="case-name">National Union of Bank Employees v HSBC Bank Malaysia Berhad</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">19/3-1343/22</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 206 of 2025</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Puan Hajah Zalina binti Haji Awang@Mamat</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">77-86</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #8b5cf6">Trade Dispute</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">The National Union of Bank Employees (NUBE) brought a trade dispute against HSBC Bank Malaysia Berhad (the Bank) alleging non-compliance with the grievance procedure under Article 4 of the MCBA/NUBE Collective Agreement. The dispute arose from a grievance lodged by Sivananthan Jegatheeswaran (UW-1), an IRC representative and Bank employee, on 25 November 2019 concerning perceived lack of transparency by the Bank regarding a Voluntary Separation Scheme (VSS) exercise. The grievance progressed through the Office Level Meeting on 17 December 2019 and the Branch Level Meeting on 6 February 2020, but remained unresolved. The Union attempted to escalate the matter to a National Level Meeting, but disputes arose over venue and conduct, and no proper written notice was served as required by Article 4(2)(d)(i). The Bank argued that NUBE itself breached the prescribed timelines under Article 4, including the seven-day filing requirement, and failed to properly escalate the grievance through the contractual procedure. The Court found that NUBE and UW-1 had failed to comply with the mandatory timelines and procedural steps prescribed under Article 4 of the Collective Agreement, relying on the Court of Appeal&#x27;s affirmation in Malayan Banking Berhad v Kesatuan Kebangsaan Pekerja-Pekerja Bank that failure to file a grievance within seven days was fatal. The Court further noted that UW-1 had not taken the VSS and was not otherwise affected by it, rendering the grievance academic. The Court unanimously dismissed the Union&#x27;s application.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-neutral">Pending / Not stated</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation"><span class="na">No monetary award</span></p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Section 20</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>Industrial Relation Act 1967</li><li>Industrial Relations Act 1967</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Salah Laku / Misconduct" id="case-5">
+      <div class="case-header" style="border-left: 4px solid #ef4444">
+        <div class="case-number">Case 5</div>
+        <h2 class="case-name">David Chew Yu Lin v BFM Media Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">21(31)(21)/4-726/19</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 470 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Tuan Syed Noh Bin Said Nazir @ Syed Nadzir</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">87-110</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #ef4444">Salah Laku / Misconduct — Sexual Harassment</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">David Chew Yu Lin was employed by BFM Media Sdn Bhd as a Presenter/Producer from 1 January 2010, with a last drawn salary of RM10,100.00 per month. Following an anonymous email circulated in November 2018 alleging sexual harassment at the company, BFM appointed an Independent Investigating Committee comprising external lawyers to investigate. The Claimant was interviewed on 14 December 2018 and subsequently issued a Notice to Show Cause on 24 December 2018 containing allegations that he had sexually harassed an intern, Angeline Teh Ying Han, by placing his hand on her lap in a car and insisting she accept an unsolicited iPad purchase, and that he had kissed another female employee without consent in a car park. The Claimant was dismissed on 4 January 2019. The Industrial Court found that the Company proved the sexual harassment charges on a balance of probabilities. The Court held that the Claimant offered only bare denials and gave evasive and inconsistent testimony, while the complainants were credible witnesses with no motive to fabricate allegations. The Court applied the two-fold test for sexual harassment and found the touching was sexual in nature and unwelcome. The delay in reporting by the complainants was held to be immaterial. The Court concluded that the dismissal was with just cause or excuse and that the punishment of dismissal was proportionate given the employer&#x27;s duty to provide a safe working environment. The Claimant&#x27;s case was dismissed. No compensation was awarded.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM7,000.00; RM10,100.00; RM125.00</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Natural justice</li><li>Just cause or excuse</li><li>Unfair labour practice</li><li>Misconduct</li><li>Section 20</li><li>Proportionality</li><li>Burden of proof</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>Bull Information Systems v Stedman [1999]</li><li>Projek Lebuhraya Utara Selatan Bhd. v. Azahar Ahmad [1998]</li><li>This Court must consider the totality of the evidence, in order to arrive at an equitable finding as to the guilt of the Claimant on the balance of probabilities. In support of its contention the Company quoted a Federal Court decision in Mohd Ridzwan bin Abdul Razak v Asmah bt Hj. Mohd Nor [2016]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Salah Laku / Misconduct" id="case-6">
+      <div class="case-header" style="border-left: 4px solid #ef4444">
+        <div class="case-number">Case 6</div>
+        <h2 class="case-name">Paul Benjamin a/l Silva v PWB (M) Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">15(11)/4-349/21</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 191 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Tuan Andersen Ong Wai Leong</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">111-119</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #ef4444">Salah Laku / Misconduct — Assault of Subordinate</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Paul Benjimen a/l Silva was employed by PWB (M) Sdn Bhd, a facilities management company, as an Operation Executive I. He had joined the Company on 15 November 2014 as a Site Supervisor and was subsequently promoted. The Company charged the Claimant with assaulting his subordinate, Rahman Mohammad Mahbubur, a Bangladeshi cleaner, on two separate occasions at Tesco Mall in Puchong and IOI City Mall in Putrajaya. A domestic inquiry was held on 17 August 2020 and the panel unanimously found the Claimant guilty. His employment was terminated effective 24 August 2020. The Industrial Court found that the Company proved the misconduct on a balance of probabilities. Eyewitnesses COW1 and Buddha testified they saw the Claimant assault Mahbubur, and photographs of injuries were consistent with the alleged assaults. The Claimant&#x27;s denial was found to be a bare denial unsupported by evidence. The Court held that a supervisor who assaults a subordinate violates the duty of protection owed to workers and is guilty of serious misconduct. Physical violence against employees, including foreign workers, must never be tolerated in the workplace. The Court affirmed that the punishment of dismissal was appropriate and proportionate, following the precedent in Kian Joo Can Factory Berhad v Ng Kok Hooi. The Claimant&#x27;s case was dismissed. No compensation was awarded.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-blue">Reinstatement</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation"><span class="na">No monetary award</span></p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Natural justice</li><li>Just cause or excuse</li><li>Misconduct</li><li>Section 20</li><li>Domestic inquiry</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <span class="na">None cited</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Salah Laku / Misconduct" id="case-7">
+      <div class="case-header" style="border-left: 4px solid #ef4444">
+        <div class="case-number">Case 7</div>
+        <h2 class="case-name">M Anathan a/l Muniandy v HS Optimus Wood Products Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">8(16)/4-25/20</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 1841 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Tuan Mohd Taufik bin Mohd@Mohd Yusoff</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">120-136</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #ef4444">Salah Laku / Misconduct — Use of Vulgar Words</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">M Anathan a/l Muniandy joined HS Optimus Wood Products Sdn Bhd (formerly KLW Wood Products) on 4 April 2005 as a Production Coordinator and was promoted over the years to General Manager, with a last drawn salary of RM15,750.00 per month. On 30 April 2019, the Claimant sent WhatsApp messages in a company group using vulgar words and showing disrespect towards the Chief Marketing Officer, Mr Albert Tan Sai Beng. He was also charged with yelling and screaming at Director Mr Chia Fook Sam during a telephone conversation, and with giving false representation to a client (SIAC) regarding project completion dates. A domestic inquiry was held on 24 July 2019 and the Claimant was dismissed effective 11 September 2019. The Industrial Court found all three charges proved. On the first charge, the Court held the vulgar words were directed at Mr Albert, as evidenced by the Claimant&#x27;s own apology and his failure to assert in his show cause reply that the words targeted another entity. On the second charge, the Claimant&#x27;s failure to dispute the yelling allegation in his show cause reply and his apology to Mr Chia confirmed the misconduct. On the third charge, the Claimant&#x27;s email correspondence confirmed he had given his director the impression everything was proceeding as planned when it was not. The Court held the dismissal was proportionate given the Claimant&#x27;s senior managerial position, the seriousness of the misconduct, and the irreparable breach of trust with two company directors. The Claimant&#x27;s case was dismissed. No compensation was awarded.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-green">Dismissal with just cause or excuse</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM15,750.00; RM1,700.00</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Just cause or excuse</li><li>Misconduct</li><li>Section 20</li><li>Domestic inquiry</li><li>Proportionality</li><li>Burden of proof</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>In Plaat Ruber Sdn Bhd v Goh Chok Guan [1995]</li><li>Chen Kong Men v. Asia Travelmart Sdn Bhd [2006]</li><li>Sdn Bhd v. Ilhami Mohamad [2001]</li><li>In Pearce v. Foster [1886]</li><li>Bhd v Goh Hock Teong [2003]</li><li>Stamford Executive Centre v. Dharsini Ganesan [1986]</li><li>The claimant also submitted that the Company had failed to consider his apologies towards Mr. Albert and Mr. Chia, when dismissing him. The Company submitted that due to the severity of the misconduct, such apologies were insufficient to exempt him from dismissal. the case of Mohamed Nordin Hj Abdul Mutalib v. Palmco Oil Mill Sdn. Bhd. [2008]</li><li>Esso Production Malaysia Incorporated v. Yusop Nordin [1995]</li><li>Bakti Comintel Manufacturing Sdn. Bhd. v. Ibrahim Abdullah [1996]</li><li>Milan Auto Sdn Bhd v. Wong Seh Yen [1995]</li><li>In Syarikat Kenderaan Melayu Kelantan Sdn Bhd v Transport Workers Union [1990]</li><li>British Leyland UK Ltd. v. Swift [1981]</li><li>In Tian San Sdn Bhd v. Lin Kim Ping [1997]</li><li>Ireka Construction Berhad v Chantiravathan Subramaniam James [1995]</li><li>Muhammad Fariduddin Zakryia v. Solar Gas Sdn. Bhd. [2023]</li><li>Khairuddin Bin Kamarudin v The Coronade Hotel [2012]</li><li>Nur Faridah Nanyan v GKN Driveline Malaysia Sdn. Bhd. [2009]</li><li>Roslan Yussof v. Toyochem Sdn Bhd [2012]</li><li>Maritime Intelligence San Bhd v. Tan An Giek, [2021]</li><li>Wong Chee Hong v. Cathay Organisation Malaysia Sdn Bhd [1988]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Salah Laku / Misconduct" id="case-8">
+      <div class="case-header" style="border-left: 4px solid #ef4444">
+        <div class="case-number">Case 8</div>
+        <h2 class="case-name">Hanis Naz Azniza binti Hamzah v Malaysia Airports Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">18/4-1041/21</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 596 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">Y.A. Tuan Jeyaseelen a/l T. Anthony</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">137-157</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #ef4444">Salah Laku / Misconduct — Use of Vulgar Words</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Hanis Naz Azniza binti Hamzah was employed by Malaysia Airports Sdn Bhd as an Aviation Security (AVSEC) Assistant at Penang International Airport from 25 July 2011, with a last drawn salary of RM2,844.51. On 10 March 2020, while resting at the airport McDonald&#x27;s outlet, her superior Sergeant Asmiza confronted and scolded her for leaving her duty post. The Claimant uttered the vulgar words &quot;puki mak hang&quot; and pushed Sergeant Asmiza&#x27;s shoulder. The Company dismissed the Claimant on 18 June 2020 without holding a domestic inquiry. The Industrial Court found the misconduct proved but held that the punishment of dismissal was disproportionate. The Court noted there was a long-standing strained relationship between the Claimant and Sergeant Asmiza, that they had been deliberately rostered apart but were mistakenly placed together on the incident date, and that Sergeant Asmiza had provoked the Claimant by scolding her publicly in an angry manner. The Court further noted the Claimant&#x27;s clean record of nearly 9 years, her remorse and attempts to apologize, and the availability of lesser punishments such as suspension without pay or demotion. The Court ordered compensation in lieu of reinstatement of RM22,756.08 (8 years of service) and back wages of RM58,028.00 (24 months, less 15% for post-dismissal earnings), with a 40% deduction for contributory misconduct applied to the total. The Company was ordered to pay the Claimant RM48,470.45.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM 2,844.51; RM 1,900.00; RM 2,500.00; RM2,; RM 68,268.24; RM 58,028.00; RM 22,756.08; RM 80,784.08; RM 48,470.45</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Natural justice</li><li>Just cause or excuse</li><li>Misconduct</li><li>Section 20</li><li>Domestic inquiry</li><li>Proportionality</li><li>Burden of proof</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>See also case of Shell Malaysia Trading Sdn Bhd v Arunageri Periasamy [1996]</li><li>Where representations are made and are referred to the Industrial Court for enquiry, it is the duty of the Court to determine whether the termination or dismissal is with or without just cause or excuse If the employer chooses to give a reason or excuse for the action taken by him, the duty of the Industrial Court will be to enquire whether that reason or excuse has or has not been made out. If it finds that it has not been proven, then the inevitable conclusion must be that the termination or dismissal was without just cause and excuse. The proper enquiry of the Court is the reason advanced by the employer, and that court or the High Court cannot go into another reason not relied on by the employer or find one for him. Similarly on the same point, the Federal Court in Milan Auto Sdn.Bhd v Wong Soh Yen [1995]</li><li>HANIS NAZ AZNIZA BINTI HAMZAH v. MALAYSIA AIRPORTS SDN. BHD. when the words were uttered, all that matters is that such words were uttered, as such this Court cannot accede to the submissions of the learned counsel for the Company. In addition, this Court is on all fours with the decision of the Privy Counsil in Jupiter General Insurance Co Ltd v Ardeshir Bomanji Shroff [1937]</li><li>HANIS NAZ AZNIZA BINTI HAMZAH v. MALAYSIA AIRPORTS SDN. BHD. In reference to the case of Francis Lim Chunn Loong v Flexible Top Services [2023]</li><li>Sdn. Bhd. v. Ashvine Hari Krishnan [2023]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Salah Laku / Misconduct" id="case-9">
+      <div class="case-header" style="border-left: 4px solid #ef4444">
+        <div class="case-number">Case 9</div>
+        <h2 class="case-name">Muhammad bin Abdullah v Exxonmobil Exploration and Production Malaysia Inc</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">11/4-1232/22</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 988 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Puan Nur Fauzah binti Dato&#x27; Mokhtar</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">158-195</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #ef4444">Salah Laku / Misconduct — Insubordination — Refusal to Take COVID-19 Vaccine</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Muhammad bin Abdullah, a Mechanical Technician employed by ExxonMobil Exploration and Production Malaysia Inc since April 2014, was assigned to the Company&#x27;s offshore Lawit-A platform in Terengganu. His last drawn basic salary was RM5,266.00 per month. In August 2021, the Company implemented a mandatory COVID-19 vaccination requirement for access to its offshore facilities, in line with PETRONAS&#x27; &#x27;Green Bubble&#x27; directive. The Claimant refused to be vaccinated, citing personal health concerns, constitutional rights under Article 5 of the Federal Constitution, and the voluntary nature of the national vaccination programme. Despite extensive discussions between August 2021 and November 2021, the Claimant maintained his refusal. The Company issued a show cause letter in December 2021 and terminated him on 21 January 2022 for insubordination. The Industrial Court found the dismissal was without just cause or excuse. While acknowledging the Company&#x27;s vaccination policy was understandable given its obligations to PETRONAS, the Court held that the Company failed to undertake adequate procedural steps before implementing the policy, including formal employee consultation, offering alternatives such as unpaid leave, and accommodating the existing Ministry of Health guidelines (Annex 9) which permitted unvaccinated offshore workers subject to RT-PCR testing and quarantine. The Court ordered compensation in lieu of reinstatement of RM36,862.00 (RM5,266.00 x 7 years) and back wages of RM50,553.60 (12 months less 20% deduction), totalling RM87,415.60, payable within 60 days.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM2,500.00; RM500.00; RM1,750.00; RM5,266.00; RM150.00; RM2,123.00; RM875.00; RM36,862.00; RM63,192.00; RM12,638.40; RM50,553.60; RM87,415.60</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Natural justice</li><li>Just cause or excuse</li><li>Unfair labour practice</li><li>Misconduct</li><li>Section 20</li><li>Domestic inquiry</li><li>Proportionality</li><li>Burden of proof</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>Federal Court in the case of Maritime Intelligence Sdn Bhd v Tan Ah Gek [2021]</li><li>Occupational Safety and
+Health Act 1994</li><li>Hak Mili the Federal Court case of Maritime Intelligence Sdn Bhd v Tan Ah Gek [2021]</li><li>STC Realty Bhd v Ong Wan Chin [2006]</li><li>Sdn Bhd v Foong Kah Tin [1987]</li><li>Industrial Court in the case of Ahmad Nazri Mustafa v Boustead Petroleum Marketing Sdn Bhd [2017]</li><li>Courts have consistently held n a plethora of cases that disobedience of lawful orders is a serious misconduct that warrants dismissal. For instance, in the Industrial Court case of Chua Fang Lin v Nanyang Siang Pau Sdn Bhd [2014]</li><li>MUHAMMAD BIN ABDULLAH v. EXXONMOBIL EXPLORATION AND PRODUCTION MALAYSIA INC. furthermore, it is open to an employer to justify his action before the Industrial Court by leading all relevant evidence before it and by having the entire matter referred before the Court as enunciated by the Supreme Court in the case of Dreamland Corp Sdn Bhd v Choong Chin Soo [1988]</li><li>Occupational Safety and Health Act 1994</li><li>Court would like to point out that it is the duty of the Industrial Court to determine whether the dismissal is with or without just cause or excuse. This is clearly stated in the Federal Court case of Wong luen Hock v Syarikat Hong Leong Assurance Bhd [1995]</li><li>Claimant&#x27;s reliance on the case of O&#x27;connor v Commissioner For Government Transport [1954]</li><li>Australian High Court case of O&#x27;Connor v Government Transport [1954]</li><li>Industrial Relations Act 1967</li><li>In relation to the offshore allowance, the Industrial Court in the case of Rowland Anak Nicholas v Murphy Sarawak Oil Co. Ltd [2018]</li><li>In Pearce v Foster [1886]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Salah Laku / Misconduct" id="case-10">
+      <div class="case-header" style="border-left: 4px solid #ef4444">
+        <div class="case-number">Case 10</div>
+        <h2 class="case-name">Tan Seng Kok v Sunshine Bread Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">14/4-1316/22</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 1232 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Puan Eswary a/p Maree</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">196-211</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #ef4444">Salah Laku / Misconduct — Abandonment of Employment (COVID-19)</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Tan Seng Kok was employed as an IT Manager by Sunshine Bread Sdn Bhd from 11 February 2019, earning a last drawn basic salary of RM12,700.00 per month. In June 2021, the Claimant contracted COVID-19 at the workplace during a mandatory mass swab test, was classified as a Category 5 patient, and was admitted to the ICU where he was intubated and ventilated. After discharge, he continued to suffer post-COVID complications including restrictive lung disease, Stage 2 chronic kidney disease, and mild post-traumatic stress disorder. All his leave applications, including unpaid medical leave, were approved by the Company through its INFO-TECH system. On 8 April 2022, an occupational health doctor assessed him as fit to work, and the Company instructed him to return on 27 April 2022. However, following a follow-up appointment with his treating doctor at Sunway Hospital on 26 April 2022, who advised continued rehabilitation, the Claimant emailed the Company requesting 20 working days of unpaid leave until 31 May 2022. The Company terminated him on 27 April 2022 for deemed abandonment of employment and wilful insubordination. The Industrial Court found the dismissal without just cause or excuse, holding that the Company acted too hastily, failed to comply with procedural fairness by not issuing a show cause letter, barred the Claimant&#x27;s access to the leave system, and should have shown sympathy given the severity of his COVID-19 illness. The Court awarded 24 months back wages of RM304,800.00 and compensation in lieu of reinstatement of RM38,100.00 (3 years), totalling RM342,900.00.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM12,700.00; RM100.00; RM450.00; RM 12,700.00; RM304,800.00; RM38,100.00; RM342,900.00</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Natural justice</li><li>Just cause or excuse</li><li>Misconduct</li><li>Section 20</li><li>Domestic inquiry</li><li>Burden of proof</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>The Court will now proceed to consider the compensation the Claimant is entitled to for the loss of his employment. The Federal Court in Dr. A Dutt v. Assunta Hospital [1981]</li><li>See Milan Auto Sdn Bhd v. Wong Seh Yen [1995]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Pemberhentian Kerja / Retrenchment" id="case-11">
+      <div class="case-header" style="border-left: 4px solid #f97316">
+        <div class="case-number">Case 11</div>
+        <h2 class="case-name">Zam Zuvita binti Zamani v MRCB Builders Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">15(6)/4-1469/21</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 1231 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Tuan Andersen Ong Wai Leong</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">212-226</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #f97316">Pemberhentian Kerja / Retrenchment</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Zam Zuvita binti Zamani commenced employment within the MRCB Group on 16 May 2005, initially with MRCB Engineering Sdn Bhd as a Contract Officer, and was subsequently transferred across several MRCB subsidiaries before being transferred to MRCB Builders Sdn Bhd on 1 February 2018. She was promoted to Senior Executive Procurement (Grade 4) on 1 April 2019, with a last drawn basic salary of RM4,680.00. Following the COVID-19 pandemic and the implementation of the MCO in March 2020, the MRCB Group undertook restructuring measures. In April 2020, the Claimant was transferred from the Project Procurement Unit to the Group Purchase Unit, and approximately three months later, on 21 July 2020, she was retrenched on grounds of redundancy, purportedly applying the LIFO principle as the most junior employee in the GPU. The Industrial Court found the dismissal without just cause or excuse. The Court held that the redundancy was not genuine, noting the Company transferred the Claimant to the GPU knowing it would create surplus manpower, then applied the LIFO principle incorrectly by assessing tenure within the GPU rather than overall service with the MRCB Group. The Company itself recorded a profit of RM2,739,058.00 for the financial year ended 31 December 2020. A contract employee, Puan Azlinda, who had shorter service, was retained over the Claimant. The Court awarded back wages of RM101,088.00 (24 months less 10% deduction) and compensation in lieu of reinstatement of RM70,200.00 (15 years of service), less RM19,440.00 already paid, totalling RM151,848.00.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM19,440.00; RM219; RM170,576,000.00; RM175,; RM2,739,; RM722,350,021.00; RM208,244,000.00; RM12,127,043.00; RM4,680.00; RM112,320.00; RM11,232.00; RM101,088; RM70,200.00; RM101,088.00; RM171,288.00; RM151,848.00</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Just cause or excuse</li><li>Lifo</li><li>Section 20</li><li>Last in first out</li><li>Burden of proof</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>Sdn Bhd v S Balasingam [2000]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Pemberhentian Kerja / Retrenchment" id="case-12">
+      <div class="case-header" style="border-left: 4px solid #f97316">
+        <div class="case-number">Case 12</div>
+        <h2 class="case-name">John Ashley Etherington dan Mohd Azam bin Suci v Oceaneering Services (Malaysia) Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">7/4-903/20</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 162 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Puan Vanithamany a/p Sivalingam</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">227-240</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #f97316">Pemberhentian Kerja / Retrenchment</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">John Ashley Etherington, employed from 24 July 2017 as Manager Asia Pacific Asset Integrity with a last drawn salary of RM107,924.02, and Mohd Azam bin Saat, employed from 24 June 2019 as Advanced NDT Manager SEA with a salary of RM31,250.00 and still on probation, were both retrenched by Oceaneering Services (Malaysia) Sdn Bhd. The Company claimed their positions became redundant following its &#x27;Path to Profitability&#x27; restructuring exercise, which included closure of its KL Office by December 2019. The 1st Claimant received a retrenchment notice on 18 October 2019 with his last working day on 31 October 2019; the 2nd Claimant was served notice on 6 November 2019. The Industrial Court found both dismissals without just cause or excuse. The Court held that the retrenchment was not conducted in a bona fide manner: the 1st Claimant&#x27;s residual duties were absorbed by a subordinate based in Australia who travelled to Malaysia at greater cost; the Company continued paying bonuses despite claiming losses; NDT and SIS work continued even after the Claimants&#x27; departure; the Company failed to submit PK Forms to the relevant authorities; no outplacement services were offered despite claims to the contrary; and the Company did not comply with the Code of Conduct for Industrial Harmony. The Court awarded the 1st Claimant RM2,548,539.32 (comprising 24 months back wages less 20%, compensation in lieu for 2 years, bonus entitlement, less retrenchment benefit paid) and the 2nd Claimant RM145,749.45 (6 months back wages less 20%, less severance paid).</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM107,924.02; RM31,250.00; RM126,989.62; RM650,000.00; RM2,590,176.48; RM518,035.29; RM2,072,141.18; RM215,848.04; RM311.02; RM187,500.00; RM37,500.00; RM4,250.55; RM145,749.45; RM2,548,539.32</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Just cause or excuse</li><li>Labour practice</li><li>Unfair labour practice</li><li>Lifo</li><li>Lifo does not apply to the present case</li><li>Section 20</li><li>Last in first out</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>Employment Act 1955</li><li>SWADESAMITRAN LTD v. THEIR WORKMEN, [1960]</li><li>CO SDN BHD v. S.BALASINGHAM [1997]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Pemberhentian Kerja / Retrenchment" id="case-13">
+      <div class="case-header" style="border-left: 4px solid #f97316">
+        <div class="case-number">Case 13</div>
+        <h2 class="case-name">Noor Haizlynda binti Abu Bakar v Diebold Nixdorf Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">13/4-2353/21</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 1860 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Tuan Arun Kuviar a/l S Kanesin</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">241-248</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #f97316">Pemberhentian Kerja / Retrenchment</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">The Claimant, Noor Haizlynda binti Abu Bakar, commenced employment with Diebold Nixdorf Sdn Bhd on 1 August 2015 as a Team Leader and was subsequently promoted to Service Desk Manager. By letter dated 20 January 2020, the Company terminated her employment effective 30 April 2020 on the ground of redundancy, citing a global restructuring of its Global Service Desk operations. The Claimant was paid a severance payment of RM22,168.22. The Industrial Court found that the Company failed to prove a genuine redundancy situation. The Court noted that no documentary evidence of the alleged global restructuring was produced, the restructuring purportedly affected only the Claimant, and the Company&#x27;s own witness conceded that the Claimant&#x27;s position remained essential. The Court concluded it was more probable that the Claimant was singled out for termination due to a soured relationship with her superior (COW1), and the Company used retrenchment as a pretext to remove her rather than addressing performance or conduct issues through proper channels. The alternative positions offered to the Claimant were found to be of far lower grade and pay, rendering them not genuine offers. The Court held the dismissal was without just cause or excuse and ordered the Company to pay the Claimant RM99,596.78, comprising 24 months backwages of RM96,915.00 (after 35% deduction for post-dismissal earnings) and compensation in lieu of reinstatement of RM24,850.00, less the severance payment already received.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span> <span class="badge badge-neutral">Claim dismissed</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM22,168.22; RM5,912.50; RM300.00; RM6,212.50; RM149,100.00; RM96,915.00; RM24,850.00; RM121,765.00; RM99,596.78</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Just cause or excuse</li><li>Section 20</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>It is as clear as light of the day that the sole reason for the Claimant&#x27;s termination in the said letter of severance is redundancy. Considerable time was wasted by both parties in their pleadings, and as well as during the hearing in ventilating extensively on issues in respect of the Claimant&#x27;s performance and other issues regarding the Claimant&#x27;s conduct. In this regard, the Court refers to the Federal Court&#x27;s decision in Maritime Intelligence Sdn Bhd v Tan Ah Gek [2021]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Pemberhentian Kerja / Retrenchment" id="case-14">
+      <div class="case-header" style="border-left: 4px solid #f97316">
+        <div class="case-number">Case 14</div>
+        <h2 class="case-name">Hafizal bin Kassim v CTL Pilling &amp; Construction Works Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">10/4-2494/21</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 355 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Tuan Tengku Amir Zaki bin Tengku Abdul Rahman</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">249-257</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #f97316">Pemberhentian Kerja / Retrenchment</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">The Claimant, Hafizal bin Hassim, was employed by CTL Piling &amp; Construction Works Sdn Bhd from 13 December 2008 as a Piling Machine Operator with a basic salary of RM5,000.00 and a fixed allowance of RM1,050.00 per month. After 13 years of service, the Company terminated his employment effective 26 March 2021 by letter dated 19 March 2021, giving seven days notice, on the ground that there were no further projects due to the economic downturn caused by the COVID-19 pandemic. The Court found that the retrenchment was genuine and carried out in good faith. Evidence showed the Company had completed its last project in August 2020, received no new projects thereafter, and its workforce was reduced from 13 employees in August 2021 to just one by August 2022. The Claimant himself confirmed during cross-examination that there had been no site work after November 2020 and no projects in 2021. Although the Company did not produce audited financial accounts, the Court held that other evidence, including EPF statements showing workforce reduction and oral testimony, was sufficient to establish a bona fide redundancy. The Court also dismissed the Company&#x27;s res judicata defence, holding that the Labour Court proceedings concerned unpaid wages under a different statutory provision and constituted a separate cause of action. Accordingly, the Claimant&#x27;s claim was dismissed.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-neutral">Pending / Not stated</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM5,000.00; RM1,050.00</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Seksyen 20</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <span class="na">None cited</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Pembuangan Konstruktif / Constructive Dismissal" id="case-15">
+      <div class="case-header" style="border-left: 4px solid #eab308">
+        <div class="case-number">Case 15</div>
+        <h2 class="case-name">Sui Ng Ching @Ng Ching v Houses Lightings Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">4/4-152/23</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 1555 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Tuan Augustine Anthony</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">258-283</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #eab308">Pembuangan Konstruktif / Constructive Dismissal</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">The Claimant, Sui Ng Ching @ Ng Ching, was employed by Houses Lightings Sdn Bhd from 27 July 2015 as a sales representative with a last drawn salary of RM6,400.00 per month. On 26 October 2020, she treated herself as constructively dismissed, citing eight grounds including payment of salary in kind through vouchers, removal of rest days and public holidays, unreasonable deduction of incentives, alleged unlawful detention by the HR Manager (COW2) on two occasions, forced conversion of medical leave to annual leave, public humiliation, and being asked to sign an unreasonable employment contract. The Court applied the contract test from Wong Chee Hong v Cathay Organisation and found that while some of the Company&#x27;s conduct during the COVID-19 pandemic may have amounted to breaches of employment terms, the Claimant had condoned these earlier breaches by continuing to work without asserting her rights promptly. As for the more serious allegations of unlawful detention and threats in October 2020, the Court found the Claimant&#x27;s version unconvincing and preferred the Company&#x27;s evidence. The Court also noted the Claimant failed to escalate her complaints to higher management and instead repeatedly lodged police reports while continuing to work. The Court held the Claimant failed to prove constructive dismissal on the balance of probabilities and found she had in fact abandoned her employment. Her claim was dismissed.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM2,500.00; RM6,400.00; RM1,792.00; RM3; RM370.00; RM300.00</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Just cause or excuse</li><li>Misconduct</li><li>Section 20</li><li>Constructive dismissal</li><li>Burden of proof</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>Donovan v. Invicta Airways Ltd. [1970]</li><li>Industrial Relations Act 1967</li><li>Milan Auto Sdn. Bhd. v. Wong Seh Yen [1995]</li><li>Whenever a Company has caused the dismissal of the workman, it is then incumbent Jalaysia on part of the Company to discharge the burden of proof that the dismissal was with just cause or excuse. This Court will now refer to the case of Ireka Construction Berhad v. Chantiravathan all Subramaniam James [1995]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Pembuangan Konstruktif / Constructive Dismissal" id="case-16">
+      <div class="case-header" style="border-left: 4px solid #eab308">
+        <div class="case-number">Case 16</div>
+        <h2 class="case-name">Gerard a/l Elias v K-GE Restaurant Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">9/4-1118/22</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 2075 of 2023</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Puan Rusita binti Md Lazim</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">284-298</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #eab308">Pembuangan Konstruktif / Constructive Dismissal</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">The Claimant, Gerard a/l Elias, was employed by K-GE Restaurant Sdn Bhd from 15 October 2019 as an Operations Manager with an agreed basic salary of RM4,500.00 per month. Between March 2020 and October 2021, the Company repeatedly reduced or failed to pay the Claimant&#x27;s full salary, paying amounts ranging from RM823.00 to RM3,365.38 per month, and made no salary payments at all from June to October 2021. The Company also failed to make EPF and SOCSO contributions at the material time. On 15 October 2021, when the Claimant reported for work and raised the issue of unpaid salaries, the Company requested him to return the company&#x27;s belongings and leave within two hours. The Claimant treated himself as constructively dismissed effective 1 November 2021. The Court found that the persistent non-payment and reduction of the Claimant&#x27;s agreed salary constituted a fundamental breach going to the root of the employment contract. The Company&#x27;s argument that the Claimant had accepted a basic salary of RM1,200.00 was not accepted. The Court also found the delay in the Claimant&#x27;s complaint was justified given the COVID-19 pandemic and the Company&#x27;s repeated promises to rectify the shortfall. The Court ordered the Company to pay RM76,950.00, comprising 23 months backwages of RM72,450.00 (after 30% deduction) and one month&#x27;s compensation in lieu of reinstatement of RM4,500.00.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span> <span class="badge badge-neutral">Claim dismissed</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM 4,500.00; RM 36,000.00; RM4,500.00; RM 1200.00; RM4500; RM2250; RM 2596.15; RM 4500; RM 2785; RM1826.92; RM2500; RM3000; RM1200; RM3365.38; RM823; RM823.00; RM1200.00; RM3300.00; RM1,200.00; RM3,300.00; RM3300; RM103,500.00; RM 31,050.00; RM76,950.00; RM72,450.00</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Constructive dismissal</li><li>Just cause or excuse</li><li>Burden of proof</li><li>Section 20</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>In Quah Swee Khoon v. Sime Darby Berhad [2001]</li><li>Ltd v. Sharp [1978]</li><li>Sdn Bhd v. Anwar Abd Rahim [1996]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Pembuangan Konstruktif / Constructive Dismissal" id="case-17">
+      <div class="case-header" style="border-left: 4px solid #eab308">
+        <div class="case-number">Case 17</div>
+        <h2 class="case-name">Asma binti Aripin v M3 Technologies (Asia) Berhad</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">12(20)/4-591/22</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 160 of 2025</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Puan Chow Siew Lin</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">299-325</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #eab308">Pembuangan Konstruktif / Constructive Dismissal</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">The Claimant, Asma binti Aripin, served M3 Technologies (Asia) Berhad for approximately 21 years, commencing employment on 14 February 2000 and rising to the position of General Manager with a last drawn gross salary of RM16,750.00. She tendered a resignation letter dated 18 March 2021, giving six months notice. On 26 April 2021, the Company asked her to leave immediately, citing insufficient funds to pay her salary. The Claimant claimed constructive dismissal, alleging she had been marginalised and isolated from office matters following a change in management, the appointment of a management consultant who met with her subordinates without informing her, and the reorganisation of staff under her supervision. The Court found that the Claimant failed to prove constructive dismissal. Her resignation letter was clear and voluntary, containing no complaints and instead expressing appreciation to her superior. The alleged grievances were not raised with the Company formally or in her resignation letter, and were only articulated in a letter dated 28 May 2021 after she had left the Company. The Court noted the Claimant had incorporated a competing company, Amaz Digital Sdn Bhd, on 17 March 2021, one day before tendering her resignation, suggesting her departure was planned and voluntary. The Court further found no notice was given to the Company to remedy the alleged breaches. The Claimant&#x27;s claim was dismissed.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-neutral">Pending / Not stated</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM16,750.00</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Constructive dismissal</li><li>Just cause or excuse</li><li>Burden of proof</li><li>Section 20</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>The above proposition was ollowed by the Industrial Court in the case of Percetakan Keselamatan Nasional Sdn Bhd v Jamaliah Md Yusoff [2001]</li><li>Sdn Bhd v Anwar bin Abd Rahim [1996]</li><li>The Company cited the case of MCSB Software Development Sdn Bhd v Leong Mun Kam [2004]</li><li>In the case of Weltex Knitwear Industries Sdn. Bhd. v Law Kar Toy [1988]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Salah Laku / Misconduct" id="case-18">
+      <div class="case-header" style="border-left: 4px solid #ef4444">
+        <div class="case-number">Case 18</div>
+        <h2 class="case-name">Alfian Affendi bin Ahmad Anuar v Carigali-PTTEPI Operating Company Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">22/4-1076/22</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 1826 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Tuan Paramalingam J. Doraisamy</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">326-340</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #ef4444">Salah Laku / Misconduct — Poor Performance</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Alfian Affendi bin Ahmad Anuar, a Mechanical Engineer, commenced employment with Carigali-PTTEPI Operating Company Sdn Bhd on 10 June 2013 on a two-year contract and was subsequently confirmed as a permanent employee effective 1 January 2015. He received merit increments in 2017 and 2018. Following a performance rating of 4 (Needs Improvement) for the year 2020, the Company placed him on a six-month Performance Improvement Plan (PIP) from January to June 2021, requiring him to achieve at least a rating of 3. The Claimant achieved the stipulated rating of 3 during the PIP period. Despite this, the Company extended the PIP for a further three months and raised the target to a rating of 3M, which the Claimant failed to meet. He was terminated on 12 October 2021 for poor performance. The Industrial Court found that the Company had shifted the goalpost by imposing a higher rating requirement after the Claimant had met the original target of rating 3 as stated in the PIP letter. The Court held that the Company should have formally closed the PIP in accordance with its own PIP Guideline once the Claimant met the stated objective. The Company thus failed to satisfy the third limb of the Ireka Construction test. The dismissal was held to be without just cause or excuse. The Court awarded the Claimant RM655,534.88, comprising RM170,268.80 as compensation in lieu of reinstatement (8 months x RM21,283.60), RM510,806.40 as 24 months backwages, less a 5% deduction for post-dismissal earnings, payable within 30 days.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span> <span class="badge badge-amber">Compensation awarded</span> <span class="badge badge-neutral">Claim dismissed</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM638.51; RM851.34; RM91,736.02; RM63,850.80; RM19; RM9,222.89; RM18,300.00; RM21,283.69; RM170,268.80; RM21,283.60; RM655,534.88; RM 170,268.80; RM 510,806.40; RM 655,534.88</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Just cause or excuse</li><li>Misconduct</li><li>Burden of proof</li><li>Section 20</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>Industrial Relations Act 1967</li><li>The burden of proof in an unfair dismissal claim lies on the employer to prove on a balance of probabilities that the employee is guilty of the allegation or the reason for the dismissal. This principle was expounded by the Industrial Court in the case of Stamford Executive Centre v. Dharsini Ganeson [1986]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Peletakan Jawatan Paksa / Forced Resignation" id="case-19">
+      <div class="case-header" style="border-left: 4px solid #ec4899">
+        <div class="case-number">Case 19</div>
+        <h2 class="case-name">Daniel Devadass a/l T. Ganapathy Supramaniam v Tasek Corporation Berhad</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">10/4-2525/21</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 390 of 2023</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Tuan Zulhelmy bin Hasan</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">341-364</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #ec4899">Peletakan Jawatan Paksa / Forced Resignation</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Daniel Devadass a/l T. Ganapathy Supramaniam was employed by Tasek Corporation Berhad on 1 July 2019 as Group Senior Manager of Human Resources. He was promoted and given a salary adjustment to RM12,500.00 per month effective 1 January 2020 in recognition of his good performance. On 12 March 2021, the Company&#x27;s Group Chief Operating Officer, Lian Ka Siew, called the Claimant to a Zoom meeting and instructed him, on the directive of the Company&#x27;s Singapore headquarters, to tender his resignation with immediate effect. No reason was given. When the Claimant refused to resign, he was ordered to hand over Company property and was barred from entering the premises on 15 March 2021. Subsequent Zoom meetings on 18 March 2021 to negotiate a mutual settlement ended in deadlock. The Company alleged negligence, misconduct, and various performance failures in its Statement in Reply, but none of these allegations had ever been raised with the Claimant during his employment, nor was any disciplinary action taken. The Court found that the Claimant was forced to resign, which amounted to a dismissal. The allegations of misconduct were held to be afterthoughts and fabrications introduced after the dismissal. The dismissal was without just cause or excuse. The Court awarded RM212,500.00, comprising RM12,500.00 as compensation in lieu of reinstatement (1 year of completed service), RM250,000.00 as 20 months backwages, less a 20% deduction for post-dismissal earnings, payable within 30 days.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM6,000.00; RM12,500.00; RM35,000.00; RM62,988.22; RM19,000.00; RM250,000.00; RM50,000.00; RM50,000; RM212,500.00</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Natural justice</li><li>Domestic inquiry</li><li>Just cause or excuse</li><li>Unfair labour practice</li><li>Misconduct</li><li>Section 20</li><li>Constructive dismissal</li><li>Burden of proof</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>Sdn. Bhd. v. Terence Tan Nyan Yin [2002]</li><li>Sdn. Bhd. v. Yap Kok Foong [1998]</li><li>Sdn. Bhd. v. Soo Hing Lin [2003]</li><li>East Sussex Country Council v. Walker [1972]</li><li>Kuala Lumpur Glass Manufacturers Co Sdn. Bhd. v. Lee Poh Kheng [1995]</li><li>Sdn. Bhd. v. Greenson Dauk [2002]</li><li>Act was not clearly defined but it simply means the termination of employment by an employer. In the case of Colgate Palmolive Sdn. Bhd. v. Yap Kok Foong [1998]</li><li>Industrial Relations Act 1967</li><li>See the case of Mohamed Ali Mohamed Ariffin v. Commercial Marketers And Distributors Sdn. Bhd. [2016]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Pekerjaan Tetap / Fixed Term Contract" id="case-20">
+      <div class="case-header" style="border-left: 4px solid #14b8a6">
+        <div class="case-number">Case 20</div>
+        <h2 class="case-name">Muhasa Athullah Bin Mohamed Mohinudeen v Agro Engineering Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">10/4-29/22</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 71 of 2023</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Tuan Zulhelmy bin Hasan</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">365-395</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #14b8a6">Pekerjaan Tetap / Fixed Term Contract</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Muhasa Athullah bin Mohamed Mohinudeen was offered a fixed-term contract as Designated Person Ashore (DPA) and Marine Superintendent by Agro Engineering Sdn Bhd on 2 June 2021, with a commencement date of 7 June 2021 for an 18-month period. The Claimant was recommended by PNSL Berhad, the ship owner for whom the Company served as contractor. Due to the Movement Control Order during the Covid-19 pandemic, the Claimant requested a postponement of his reporting date. The Company offered alternative reporting locations, including boarding a vessel at Manjung, Perak, near the Claimant&#x27;s home. However, the Claimant failed to report for duty on any date from 7 to 14 June 2021. He subsequently fell ill with kidney stones and obtained medical leave from 9 to 21 June 2021. The Company revoked the contract on 14 June 2021. The Court found that the Claimant never actually commenced employment with the Company. He failed to report for duty despite the Company providing travel documentation, accommodation arrangements, and alternative reporting locations. The Court held that his excuses were unjustified and that his failure to report constituted insubordination and abandonment of the contractual obligation. The Company proved on the balance of probabilities that the revocation was with just cause. The Claimant&#x27;s claim was dismissed.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM 0.65</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Natural justice</li><li>Sebab yang adil</li><li>Siasatan dalaman</li><li>Just cause or excuse</li><li>Unfair labour practice</li><li>Misconduct</li><li>Section 20</li><li>Constructive dismissal</li><li>Seksyen 20</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>Dalam kes Arun Kumar Bag v. Hospital Pantai Indah Sdn. Bhd. [2015]</li><li>Perhubungan antara seorang pekerja dengan majikan adalah berbentuk fidusiari dan jika seseorang pekerja itu bertindak tidak konsisten dengan hubungan ini, maka majikan berhak untuk menamatkan perkhidmatan pekerja tersebut. Prinsip ini telah dinyatakan dengan jelas dalam kes Pearce v. Foster [1886]</li><li>MUHASA ATHULLAH BIN MOHAMED MOHINUDEEN v. AGRO ENGINEERING SDN. BHD Appeals [1997]</li><li>Dalam kes J Mathew Miranda v. Bahtera Glokal Sdn. Bhd. [2018]</li><li>MUHASA ATHULLAH BIN MOHAMED MOHINUDEEN V. AGRO ENGINEERING SDN. BHD Merujuk juga dalam kes British Leyland UK Ltd. v. Swift [1981]</li><li>But one thing is clear in that whilst a contract of employment is part of the definition, it does not follow that every person who is employed under a contract of employment or being an employee of another is a workman. To be a workman a person must be employed as a workman. If he is employed in other capacity he cannot be a workman. Persoalan sama ada PYM adalah seorang pekerja dalam Syarikat akan sangat bergantung kepada sama ada dia terlibat di bawah kontrak perkhidmatan atau sebaliknya kontrak untuk perkhidmatan. Adalah jelas seperti mana dalam keputusan kes Dr. A Dutt v. Assunta Hospital [1981]</li><li>Mahkamah Persekutuan dalam kes Norizan Bakar v. Panzana Enterprise Jalaysia Sdn. Bhd. [2013]</li><li>Sementara itu dalam kes Mohamed Nordin Hj. Abdul Mutalib v. Palmco Oil Mill Sdn. Bhd. [2008]</li><li>Sdn. Bhd. v. Yap Kok Foong [1998]</li><li>MUHASA ATHULLAH BIN MOHAMED MOHINUDEEN V. AGRO ENGINEERING SDN. BHD Dalam kes Klinik Bukit Jambul v. Balavendrian Anthony [2002]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Penamatan Pekerjaan Atas Dasar Perubatan / Medical Termination" id="case-21">
+      <div class="case-header" style="border-left: 4px solid #a855f7">
+        <div class="case-number">Case 21</div>
+        <h2 class="case-name">Alias bin Bennie v Malaysia Airports Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">17/4-2112/21</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 764 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Datuk Indra bin Haji Ayub</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">396-416</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #a855f7">Penamatan Pekerjaan Atas Dasar Perubatan / Medical Termination — Medically Boarded Out</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Alias bin Bennie commenced employment as a Fire Fighter with the Department of Civil Aviation on 17 June 1983 and transferred to Malaysia Airports Sdn Bhd upon corporatisation in November 1992. Following the death of a firefighter during an emergency drill in October 2019, the Company required high-risk employees to undergo medical examinations. The Claimant was selected due to his age, medical history, and failure to complete the physical component of a competency assessment. Based solely on a medical report dated 18 October 2020 from its panel clinic, Klinik Ruslan Amin, the Company retired the Claimant on medical grounds effective 19 November 2020 pursuant to Article 31 of the 9th Collective Agreement. The Court found that the Company failed to set up a Medical Board as required under Article 31.2 of the Collective Agreement, relying instead on a single general practitioner&#x27;s report. The Company also acted hastily by not awaiting the SOCSO Medical Board&#x27;s determination, which subsequently found that the Claimant was not suffering from invalidity. Additionally, the Company failed to demonstrate sympathy or consult the Claimant about his medical condition, and assessed him against the duties of a full-fledged fireman rather than his actual light-duty watchroom role. The dismissal was without just cause or excuse. The Court awarded RM369,456.78, comprising RM182,993.86 as compensation in lieu of reinstatement (37 years of service), RM112,763.78 as 24 months backwages less 5% for gainful employment, and RM73,699.14 as outstanding retirement benefits under the Collective Agreement.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span> <span class="badge badge-neutral">Claim dismissed</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM20,620.86; RM3930.00; RM3,930.00; RM 94,320.00; RM73,699.14; RM
+73,699.14; RM4,893.31; RM4,945.78; RM 4945.78; RM300.00; RM 182,993.86; RM 112,763.78; RM 73,; RM 369,456.78</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Industrial jurisprudence&quot;</li><li>Natural justice</li><li>Just cause or excuse</li><li>Misconduct</li><li>Section 20</li><li>Burden of proof</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>Supreme Court in Kumpulan Perangsang Selangor Bhd v Zaid Hj. Mohd Noh [1997]</li><li>In the case of Abdul Latif Abdul Malik v Malaysia Airport Sdn Bhd [2022]</li><li>Consolidated Plantations Berhad v Gopinathan [1989]</li><li>In Wong Chee Hong v Cathay Organisation Malaysia Sdn Bhd [1987]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Kekebalan Negara Asing / Immunity of Foreign State" id="case-22">
+      <div class="case-header" style="border-left: 4px solid #0ea5e9">
+        <div class="case-number">Case 22</div>
+        <h2 class="case-name">Subramaniam a/l Letchimanan v Embassy of United States of America</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">6/4-587/19</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 1022 of 2023</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Tuan Amrik Singh</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">417-440</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #0ea5e9">Kekebalan Negara Asing / Immunity of Foreign State</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Subramaniam a/l Letchimanan, a Malaysian citizen, was employed by the Embassy of the United States of America as a security guard in the Local Guard Force (LGF) from 20 September 1998. On 4 April 2008, after nearly 10 years of service, he was verbally informed that his employment was terminated. No reason was given and no termination letter was issued. The US Embassy raised sovereign immunity as a defence, asserting that the dismissal of its security guard constituted a governmental act immune from the Industrial Court&#x27;s jurisdiction. After protracted judicial review proceedings through the High Court, Court of Appeal, and Federal Court, the matter was remitted to the Industrial Court to determine both the immunity issue and the merits. The Court found that the doctrine of restrictive sovereign immunity did not apply because the Claimant&#x27;s role was that of a low-ranking entry-level security guard who had no access to confidential information, diplomatic correspondences, or the interior facilities of the Embassy. His employment contract contained no confidentiality clause, and his duties were basic and could be performed by any private person. Distinguished from cases involving security investigators or guards with governmental authority, the Claimant&#x27;s employment was commercial in nature (acta jure gestionis). On the merits, since the US Embassy declined to participate and adduced no evidence of the alleged misconducts, the dismissal was held to be without just cause or excuse. The Court awarded RM66,000.00, comprising RM48,000.00 as 24 months backwages and RM18,000.00 as compensation in lieu of reinstatement (9 years of completed service), payable within 30 days.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM2,000.00; RM48,000.00; RM18,000.00; RM66,000.00</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Just cause or excuse</li><li>Misconduct</li><li>Section 20</li><li>Domestic inquiry</li><li>Burden of proof</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>The principle now applied in all circuits that have addressed the question is that a state is immune as regards proceedings relating to a contract of employment only of the act of employing the plaintiff is to be regarded as an exercise of sovereign authority having regard to his or her participation in the diplomatic functions of the mission. In Park v Shin [2002]</li><li>Barrandon v United States of America [1998]</li><li>Coco v State of America [1996]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Penemuan Dokumen / Discovery of Documents" id="case-23">
+      <div class="case-header" style="border-left: 4px solid #84cc16">
+        <div class="case-number">Case 23</div>
+        <h2 class="case-name">Khadijah binti Iskandar v Bank Pertanian Malaysia Berhad</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">14/4-2/23</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 292 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Puan Eswary a/p Maree</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">441-451</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #84cc16">Penemuan Dokumen / Discovery of Documents — Interim Award</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Khadijah binti Iskandar was dismissed on 24 May 2022 by Bank Pertanian Malaysia Berhad, where she had served as CEO. She filed an application under Section 29 of the Industrial Relations Act 1967 and Rule 21B of the Industrial Court Rules 1967 for the production of three categories of documents: the Bank&#x27;s fit and proper assessment of the Claimant, the minutes of the Board of Directors meeting on 28 April 2022, and the report prepared by the Bank&#x27;s Internal Audit Department submitted to the Board Audit Committee. The Court found that the fit and proper assessment document as described by the Claimant did not exist, as the Bank relied on Bank Negara Malaysia&#x27;s guidelines rather than a standalone document, and the Claimant failed to prove its existence. Regarding the Board minutes and the IAD report, while the Bank admitted possession, the Court accepted the Bank&#x27;s confidentiality objection and held that the Claimant failed to establish the relevancy of those documents or specify the contents she intended to rely upon. The Court further held that the Claimant&#x27;s application amounted to a fishing expedition. The Claimant&#x27;s application for production of all three categories of documents was dismissed in its entirety by way of this interim award dated 20 February 2024.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation"><span class="na">No monetary award</span></p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Domestic inquiry</li><li>Just cause or excuse</li><li>Misconduct</li><li>Section 20</li><li>Constructive dismissal</li><li>Proportionality</li><li>Burden of proof</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>Manufacturers&#x27; Insurance Co. Ltd, v. Davies [1938]</li><li>Sufian Mohamad v. Penqarah, Jabatan Bomba dan Penyelamat Malaysia Neqeri Sarawak [2019]</li><li>B of the Rules to order the productions of documents this Court is guided by the legal principles succinctly stated by His Lordship Tan Sri Dato Edgar Joseph Jr in the case of Yekambaran Marimuthu v. Malayawata Steel Berhad [1994]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Seksyen 2 Akta Perhubungan Perusahaan 1967 / Section 2 IRA 1967" id="case-24">
+      <div class="case-header" style="border-left: 4px solid #06b6d4">
+        <div class="case-number">Case 24</div>
+        <h2 class="case-name">Yeoh Chin Hock v Mat Tegas Jaya Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">20/4-1197/22</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 24 of 2025</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Puan Pravin Kaur Jessy</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">452-466</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #06b6d4">Seksyen 2 Akta Perhubungan Perusahaan 1967 / Section 2 IRA 1967 — Definition of Workman</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Yeoh Chin Hock commenced employment with Ikat Tegas Jaya Sdn Bhd on 1 September 2021 as Senior Project Manager with a monthly salary of RM15,000, engaged on a fixed-term basis for a three-year construction project in Port Dickson. The Company denied ever employing the Claimant, asserting no letter of appointment was issued. However, during cross-examination, the Company&#x27;s Managing Director, David Chong, admitted that his business partner had instructed him to offer the Claimant the position, that the Company had paid the Claimant&#x27;s September 2021 salary as evidenced by a bank statement and payment voucher, and that the Claimant had worked for the Company for one month and 22 days. The Court found David Chong to be an unreliable witness who had lied under oath on multiple points in his witness statement. The Court determined that an employment relationship existed notwithstanding the absence of a formal written contract, that the Claimant was summarily dismissed on 22 October 2021 without just cause or excuse, and that the Company provided no bona fide reasons for the dismissal. The Court awarded the Claimant 24 months of backwages at RM15,000 per month totalling RM360,000, less a 30% deduction for post-dismissal earnings, plus RM15,000 for unpaid October 2021 salary, resulting in a total award of RM267,000.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-red">Dismissal without just cause or excuse</span> <span class="badge badge-blue">Reinstatement</span> <span class="badge badge-neutral">Claim dismissed</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM15,000.00; RM 15.00; RM360,000.00; RM267,000.00; RM108,000.00</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Just cause or excuse</li><li>Misconduct</li><li>Burden of proof</li><li>Section 20</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>It is clear from the decisions in DR. A. DUTT v. ASSUNTA HOSPITAL [1981]</li><li>ROZLI MOHD IDRUS v. PTS RESOURCES SDN. BHD. [2019]</li><li>INDUSTRIAL RELATIONS ACT 1967</li><li>J MATHEW MIRANDA v. BAHTERA GLOKAL SDN BHD [2018]</li><li>The Court Of Appeal in AHMAD ZAHRI MIRZA ABDUL HAMID v AIMS CYBERJAYA SDN. BHD. [2020]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Seksyen 2 Akta Perhubungan Perusahaan 1967 / Section 2 IRA 1967" id="case-25">
+      <div class="case-header" style="border-left: 4px solid #06b6d4">
+        <div class="case-number">Case 25</div>
+        <h2 class="case-name">Lee Seong Ryeol v Chungho (M) Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">2/4-56/21</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 115 of 2025</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Tuan Mohd Zulbahrin Bin Zainuddin</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">467-477</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #06b6d4">Seksyen 2 Akta Perhubungan Perusahaan 1967 / Section 2 IRA 1967 — Definition of Workman</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Lee Seong Ryeol claimed he was dismissed on 19 February 2020 by Chungho (M) Sdn Bhd, where he allegedly served as Chief Executive Officer with a monthly salary of RM30,000. The central issue was whether a contract of employment existed between the Claimant and the Company. The evidence established that the Claimant had entered into two successive employment contracts with Chungho Nais Co Ltd, a Korean holding company, and was seconded to the Malaysian subsidiary to assist in its operations. A letter dated 26 March 2019 purportedly issued by the Company as an employment contract was found by the Court to have been prepared by Chan Foong Mun, a visa agent known to the Claimant since 2007, solely for the purpose of obtaining an employment pass from Malaysian immigration authorities. Chan Foong Mun confirmed in her statutory declaration that she was never authorised by the Company&#x27;s Managing Director to execute any employment contract with the Claimant. The Claimant also admitted during cross-examination that his second contract with Chungho Nais Co Ltd was still in force when the letter was executed, and that he had subsequently signed a mutual termination agreement on 29 May 2019. The Court concluded that no contract of employment existed between the Claimant and Chungho (M) Sdn Bhd, and accordingly dismissed the claim.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-neutral">Pending / Not stated</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM 360,000.00; RM 30,000.00</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Just cause or excuse</li><li>Misconduct</li><li>Burden of proof</li><li>Section 20</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>The Federal Court in Milan Auto Sdn. Bhd. v. Wong She Yen [1995]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Award Interim / Interim Award — Strike Off" id="case-26">
+      <div class="case-header" style="border-left: 4px solid #78716c">
+        <div class="case-number">Case 26</div>
+        <h2 class="case-name">Sugumaran a/l Nagappan v Pembangunan Sumber Manusia Berhad</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">20/4-89/23</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 1439 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Puan Pravin Kaur Jessy</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">478-484</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #78716c">Award Interim / Interim Award — Strike Off — Statutory Body</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Sugumaran a/l Nagappan was employed by Pembangunan Sumber Manusia Berhad as Vice President (Grade M) under successive fixed-term contracts commencing 13 July 2020. His second contract was subsequently revised via an addendum reducing its duration, and his services ceased on 31 December 2021 upon contract expiry. The Company applied to strike out the Claimant&#x27;s case on the ground that it is a statutory authority within the meaning of Section 2 of the Industrial Relations Act 1967, and that Section 52 of the Act excludes employees of statutory authorities from the protections of Part VI, which includes the remedy of reinstatement under Section 20. The Court found that the Company, established under the Pembangunan Sumber Manusia Act 2001, operating under full ministerial control with a board appointed by the Minister of Human Resources, is indeed a statutory authority. The Court further held that under Section 52(3), Part VI applies to employees of a statutory authority only if the Minister has issued a Gazette order prescribing the name of that authority, and no such order had been made for the Company. Following the Court of Appeal precedent in Institut Integriti Malaysia v Roziah Binti Harun, the Court allowed the Company&#x27;s application and struck out the Claimant&#x27;s case for want of jurisdiction.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-blue">Reinstatement</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM10,350.00</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <ul class="tag-list"><li>Section 20</li></ul>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>Industrial Relations Act
+1967</li><li>LIM EYE THUN v. MAJLIS PEGUAM MALAYSIA [2008]</li><li>Industrial Relations
+Act 1967</li><li>Industrial Relations Act 1967</li><li>explicitly excludes Part VI of the Industrial Relations Act 1967</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Non-Compliance" id="case-27">
+      <div class="case-header" style="border-left: 4px solid #64748b">
+        <div class="case-number">Case 27</div>
+        <h2 class="case-name">Kesatuan Kakitangan Ipoh Cargo Terminal Sdn Bhd v Ipoh Cargo Terminal Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">1/1-55/23</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 280 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Dato Wan Jeffry bin Kassim</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">485-495</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #64748b">Non-Compliance</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Kesatuan Kakitangan Ipoh Cargo Terminal Sdn Bhd filed a non-compliance complaint under Section 56(1) of the Industrial Relations Act 1967 against Ipoh Cargo Terminal Sdn Bhd for failing to pay annual salary increments under Article 20 of the 7th Collective Agreement (Award No. 3167 of 2018) for the years 2021 and 2022. The Company contended that the 7th CA expired on 31 December 2020 and that the annual increment was discretionary, further citing financial losses due to COVID-19 as justification for non-payment. The Court, applying a broad and liberal approach to interpretation as mandated by the Court of Appeal in Kesatuan Pekerja-Pekerja Perkayuan v Syarikat Jengka Sdn Bhd, found that Articles 3 and 11.3 of the 7th CA clearly provided for continuity of terms until superseded by a new collective agreement. Since no new agreement had been concluded, the 7th CA remained in force. The Court also rejected the Company&#x27;s preliminary objection of res judicata and held that financial incapacity per se does not constitute special circumstances under Section 56(2)(c). The Court unanimously ordered the Company to comply with Article 20 forthwith but dismissed the Union&#x27;s application for 8% interest and costs.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-neutral">Pending / Not stated</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM4,033,833.00; RM2,794,426.00; RM3,423,095; RM3,433,265; RM3,440,124; RM10; RM44; RM35</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <span class="na">None cited</span>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>In the case Chan Lai Peng v. Devotek Sdn. Bhd. [2006]</li><li>Sdn. Bhd. v. Timber Employees Union Peninsular Malaysia [2003]</li><li>Pekerja Perkayuan v. Syarikat Jengka Sdn. Bhd. [1997]</li><li>In the case of Leong Poh Shee v. Ng Kat Chong [1965]</li><li>Shah J in Delhi Cloth Mills Co. Ltd. v. Its Workmen [1969]</li><li>Pekerja Bank v. Bumiputra Commerce Bank Berhad [2009]</li><li>In the case of Johnny Lee Yuen un v. Xtend Services Sdn [2021]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="case-card" data-category="Non-Compliance" id="case-28">
+      <div class="case-header" style="border-left: 4px solid #64748b">
+        <div class="case-number">Case 28</div>
+        <h2 class="case-name">Dalton Wen Fong Simon Awang v KNM Exotic Equipment Sdn Bhd</h2>
+        <div class="case-meta">
+          <div class="meta-item">
+            <span class="meta-label">No. Kes</span>
+            <span class="meta-value">1/1-1186/23</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Award</span>
+            <span class="meta-value">Award No 787 of 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Presiding</span>
+            <span class="meta-value">YA Dato Wan Jeffry bin Kassim</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value">496-505</span>
+          </div>
+        </div>
+        <div class="case-tags">
+          <span class="cat-badge" style="background: #64748b">Non-Compliance</span>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="section">
+          <h3>Summary</h3>
+          <p class="summary-text">Dalton Wen Fong Anak Simon Awang filed a non-compliance complaint under Section 56(1) of the Industrial Relations Act 1967 against KNM Exotic Equipment Sdn Bhd for failing to pay RM105,000 as ordered in Consent Award No. 1092 of 2023 dated 11 May 2023, which required payment on or before 12 June 2023. The Respondent Company raised three defences: that its representative Encik Johan Nor Zaimi bin Johari acted ultra vires in recording the Consent Award without management approval; financial incapacity; and the existence of a Restraining Order granted to its parent company KNM Group Berhad by the High Court. The Court rejected all three grounds. Applying the indoor management rule from Royal British Bank v Turquand, the Court held that the Complainant was entitled to assume the Company&#x27;s Legal Advisor and Head of Legal had authority to act, and since no fraud, mistake, or misrepresentation was alleged, the Consent Award remained valid. Financial incapacity was held not to constitute special circumstances under Section 56(2)(c). The Restraining Order was found inapplicable as it named only KNM Group Berhad and KNM Process System Sdn Bhd, not the Respondent Company. The Court ordered the Respondent Company to pay RM105,000 forthwith.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Outcome</h3>
+            <div class="outcome-badges"><span class="badge badge-neutral">Pending / Not stated</span></div>
+          </div>
+          <div class="section">
+            <h3>Compensation</h3>
+            <p class="compensation">RM105,000.00; RM105,000; RM10; RM44; RM35</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="section">
+            <h3>Key Legal Principles</h3>
+            <span class="na">None cited</span>
+          </div>
+          <div class="section">
+            <h3>Precedents Cited</h3>
+            <ul class="tag-list"><li>In the case of Lim Kok Wing University of Creative Technology International Sendirian Berhad v. Ashley Alexander Musgrave [2021]</li><li>Companies Act
+2016</li><li>Sdn. Bhd. v. Timber Employees Union Peninsular Malaysia [2003]</li><li>Complainant to prove to the satisfaction of the Court that the Respondent Company had failed to comply with the Award. The Supreme Court in the DALTON WEN FONG ANAK SIMON AWANG v. KNM EXOTIC EQUIPMENT SDN BHD. case of Holiday Inn, Kuala Lumpur v. National Union of Hotel, Bar and Restaurant Workers [1988]</li><li>The Court agrees with the submission made by the Complainant that whether or Encik Johan Nor Zaimi bin Johari, who appeared for the Respondent Company during the hearing date, was mandated to record the Consent Award is an internal matter of the Respondent Company&#x27;s management. Therefore, the Court holds the view that the Complainant is entitled to rely on the principle enunciated in Royal British Bank Ltd v. Turquand [1856]</li><li>In the case of Leong Poh Shee v. Ng Kat Chong [1965]</li><li>In the case of Johnny Lee Yuen Kun v. Xtend Services Sdn [2021]</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+  </main>
+</div>
+
+<button class="back-to-top" id="backToTop" title="Back to top">&#8593;</button>
+
+<script>
+// Search
+const searchBox = document.getElementById('searchBox');
+const cards = document.querySelectorAll('.case-card');
+const resultCount = document.getElementById('resultCount');
+const total = 28;
+
+function updateCount() {
+  const visible = document.querySelectorAll('.case-card:not(.hidden)').length;
+  resultCount.textContent = visible === total
+    ? 'Showing all ' + total + ' cases'
+    : 'Showing ' + visible + ' of ' + total + ' cases';
+}
+
+searchBox.addEventListener('input', function() {
+  const q = this.value.toLowerCase();
+  document.querySelectorAll('.cat-link').forEach(l => l.classList.remove('active'));
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    card.classList.toggle('hidden', q.length > 0 && !text.includes(q));
+  });
+  updateCount();
+});
+
+// Category filter
+document.querySelectorAll('.cat-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const cat = this.dataset.cat;
+    searchBox.value = '';
+    document.querySelectorAll('.cat-link').forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+    cards.forEach(card => {
+      card.classList.toggle('hidden', card.dataset.category !== cat);
+    });
+    updateCount();
+    document.querySelector('.main').scrollTo(0, 0);
+  });
+});
+
+document.getElementById('showAll').addEventListener('click', function() {
+  searchBox.value = '';
+  document.querySelectorAll('.cat-link').forEach(l => l.classList.remove('active'));
+  cards.forEach(c => c.classList.remove('hidden'));
+  updateCount();
+});
+
+// Back to top
+const btn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  btn.classList.toggle('visible', window.scrollY > 400);
+});
+btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+
+</body>
+</html>
